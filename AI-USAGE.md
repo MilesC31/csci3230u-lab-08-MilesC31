@@ -13,25 +13,21 @@ produced or edited code you submit — **before** you commit it. Using AI only t
 ## Log (one entry per AI use — copy the block for each)
 
 ### #1 — <short title>
-- **Date:** YYYY-MM-DD
-- **Tool / model:** <free-tier assistant — free models only>
-- **Files:** `src/...`
+- **Date:** 2026-11-10
+- **Tool / model:** <Claude Sonnet 5.5>
+- **Files:** `src/AddTodoForm.jsx`
 - **Prompt (verbatim):**
 
-  ```
-  <paste the exact prompt you gave the AI>
-  ```
+`Convert AddTodoForm from an uncontrolled input (reading event.target.elements) to a controlled input using useState.`
 
-- **What it produced & what I kept / changed / rejected:** <1–3 sentences — and why the
-  result is correct>
-
+- **What it produced & what I kept / changed / rejected:** 
+  Completed the function handleSubmit and changed the return to match. I had to remove a unecessary part in the return that was left (name="text").
 ---
 
 ## Reflection (required)
 
-- **What did the agent get wrong, or do awkwardly?** (2–3 sentences. e.g. it mutated
-  state instead of copying, used a stale/old React idiom, missed an edge case, or
-  over-engineered something simple.)
+- **What did the agent get wrong, or do awkwardly?** 
+  The agent's code worked as intended, but left in the name="text" attribute. Despite the code working, it is another example of how vibe-coding can lead to bloated software.
 
 - **Explain-every-line check:** I can explain every line of the AI-assisted code in this
   lab and why it's correct. ☐  *(Your TA may ask you to walk through any of it.)*

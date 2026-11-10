@@ -11,11 +11,13 @@ const INITIAL_TODOS = [
 export default function App() {
   const [todos, setTodos] = useState(INITIAL_TODOS)
   
-  const [filter, setFilter] = useState("all"); 
+  // pasted lab code
+  const [filter, setFilter] = useState("all");
   const visible = todos.filter((t) =>
     filter === "active" ? !t.done : filter === "completed" ? t.done : true,
   );
   // render three buttons (All/Active/Completed) that setFilter; pass `visible` to <TodoList>
+  // pasted lab code
 
   // Derived from todos on every render - not stored in its own state
   const doneCount = todos.filter((todo) => todo.done).length;
@@ -27,7 +29,7 @@ export default function App() {
   //   deleteTodo(id)  → drop the matching todo
   // Then pass them as props to the components below.
 
- function addTodo(text) {
+function addTodo(text) {
   const newTodo = { id: Date.now(), text, done: false };
   setTodos([...todos, newTodo]);  
 } // adds newTodo onto a new copied array of old Todos
@@ -59,9 +61,9 @@ function deleteTodo(id) {
         Completed
         </button>
       </div>
+
       {/* Step 4: a derived count - "{done} of {total} done" computed from todos */}
-      {/* <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} /> */}
-      <TodoList todos={visible} onToggle={toggleTodo} onDelete={deleteTodo} /> 
+      <TodoList todos={visible} onToggle={toggleTodo} onDelete={deleteTodo} />  
       <p className="count">
         {doneCount} of {todos.length} done
       </p>
